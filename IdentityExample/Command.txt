@@ -1,0 +1,19 @@
+﻿// create ef init file
+$> dotnet ef migrations add InitialCreate
+
+$> dotnet ef database update
+
+// extend identity user
+$> dotnet ef migrations add Extend_IdentityUser
+$> dotnet ef database update
+
+The Entity Framework tools version '5.0.10' is older than that of the runtime '5.0.11'.
+Update the tools for the latest features and bug 
+fixes.
+An error occurred while accessing the Microsoft.Extensions.Hosting services.
+Continuing without the application service provider.
+Error: Some services are not able to be constructed
+(Error while validating the service descriptor
+'ServiceType: IdentityExample.Services.IUserService Lifetime: Scoped ImplementationType: IdentityExample.Services.UserService':
+Unable to resolve service for type 'Microsoft.AspNetCore.Identity.UserManager`1[IdentityExample.Models.ApplicationUser]'
+ while attempting to activate 'IdentityExample.Services.UserService'.
